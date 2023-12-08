@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "artfoot"
+version = "0.1.0"
+description = ""
+authors = ["vladimirmac <vladimirbodrin89@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.5"
+djangorestframework = "^3.14.0"
+python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.9"
+gunicorn = "^21.2.0"
+phonenumbers = "^8.13.22"
+django-modeltranslation = "^0.18.11"
+django-cors-headers = "^4.2.0"
+pillow = "^10.0.1"
+django-filter = "^23.3"
+celery = {extras = ["redis"], version = "^5.3.4"}
+drf-yasg = "^1.21.7"
+django-autocomplete-light = "^3.9.7"
+pdfkit = "^1.0.0"
+pytelegrambotapi = "^4.14.0"
+pytz = "^2023.3.post1"
+django-redis = "^5.4.0"
+djangorestframework-simplejwt = "^5.3.0"
+django-import-export = "^3.3.3"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.5.1"
+pre-commit = "^3.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.isort]
+multi_line_output = 1
+include_trailing_comma = true
+line_length = 120
+combine_as_imports = true
+combine_star = true
+skip_glob = ['**/migrations/**','.git','.venv']
+
+[tool.autoflake]
+#check = true
+in-place = true
